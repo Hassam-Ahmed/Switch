@@ -1,0 +1,159 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+        body{
+            background-color: rgb(45, 35, 56);
+           
+        }
+
+        div{
+            position: absolute;
+            left: 33%;
+            top: 15%;
+            color: rgb(235, 186, 186);
+            
+        }
+        .div2{
+            position: absolute;
+            right: 38%;
+            top: 69%;
+            text-align:center;
+        }
+        h1{
+            text-align: center;
+            font-size: 32px;
+            text-shadow: 3px 4px rgb(56, 76, 69);
+        }
+        label{
+            text-align: center;
+            font-size: 20px;
+        }
+        .labelfor2{
+            text-align: center;
+            color: rgb(239, 162, 162);
+            background-color: rgb(45, 35, 56);
+            text-shadow: 2px 3px rgb(69, 69, 69);
+        }
+        input{
+            margin-left: 19px;
+            border-radius: 2px solid black;
+            background-color: antiquewhite;
+            border-radius: 6px;
+            border-color: black;
+            
+            padding: 4px;
+        
+        }
+        button{
+            margin-left: 41%;
+            color: white;
+            padding-right: 12px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            padding-left: 12px;
+            background-color: rgb(53, 49, 68);
+            border-color:  black;
+            border-radius: 5px;
+            margin-top: 0%;
+        }
+        button:hover{
+            color:black;
+            background-color: white;
+        }
+
+</style>
+</head>
+<body>
+    
+        <div>
+
+               <h1>Enter Marks to Check Grades</h1>
+        <br>
+       <br>
+       <br>
+            <label id="label">Enter your Marks to check grades :</label>
+                <input type="text" name="" id="input1" placeholder="Enter Grade" atte>
+        <br>
+        
+        
+        
+        <div class="div2">
+        <label id="label2" class="labelfor2">Your Grades will appear here</label>
+    </div>
+
+<br>
+    <br>
+        <br>
+            <br>
+                <br>
+        <br>
+        <br>
+       
+            <button type="button" id="button">Submit</button>
+    </div>
+    
+<script>
+    
+var grade;
+document.getElementById("button").onclick = function(){
+  
+    grade = document.getElementById("input1").value;
+    
+  global = Number(grade);
+ 
+  switch(true){
+       
+    case grade >= 90 && grade <= 100:
+                document.getElementById("label2").innerHTML = "Your Grade is A+";
+                document.getElementById("label2").style.color = 'green';
+         
+                break;
+
+        case grade >= 80 && grade <= 89:
+           
+                document.getElementById("label2").innerHTML = "Your Grade is A";
+            
+                break;
+
+        case grade >= 70 && grade <= 79:
+            
+                document.getElementById("label2").innerHTML = "Your Grade is B";
+            
+                break;
+
+        case grade >= 60 && grade <= 69:
+            
+               document.getElementById("label2").innerHTML = "Your Grade is C";
+               document.getElementById("label2").style.color = '';
+          
+                break;
+
+        case  grade >= 50 && grade <= 59:
+          
+                document.getElementById("label2").innerHTML = "Your Grade is E";
+           
+                break;
+ 
+        case  grade <= 49 && grade <= 0:
+          
+              document.getElementById("label2").innerHTML = "You Failed :(";
+              document.getElementById("label2").style.color = ""
+          
+                     break;
+
+            default:
+               document.getElementById("label2").innerHTML = grade +" is not a Valid Grade";
+               document.getElementById("label2").style.color = 'red';
+            
+            }
+        }
+
+</script>
+</body>
+</html>
